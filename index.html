@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>La Cascade — Résidence à La Bourboule · Auvergne</title>
+<meta name="description" content="8 appartements de charme au cœur de La Bourboule, station thermale et ski. Studios dès 58€/nuit, T2 dès 85€/nuit.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#1C1812;--bgc:#22190F;--bge:#2A2318;--tc:#C4622D;--tcl:#D4733E;--am:#D4943A;--aml:#E4A44A;--cr:#F5F0E8;--crm:#DDD5C8;--st:#8C7B6B;--stl:#A89888;--tx:#EAE4DC;--txm:#9A8A7A;--fs:'Cormorant Garamond',Georgia,serif;--fn:'DM Sans',system-ui,sans-serif;}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{background:var(--bg);color:var(--tx);font-family:var(--fn);font-weight:300;line-height:1.7;overflow-x:hidden;}
+.c{width:100%;max-width:1240px;margin:0 auto;padding:0 32px;}
+h1,h2,h3{font-family:var(--fs);font-weight:400;line-height:1.1;}
+.lbl{font-size:11px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--tc);}
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .7s cubic-bezier(.16,1,.3,1),transform .7s cubic-bezier(.16,1,.3,1);}
+.reveal.v{opacity:1;transform:none;}
+.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}.d4{transition-delay:.4s}
+/* NAV */
+#nav{position:fixed;top:0;left:0;right:0;z-index:100;height:70px;display:flex;align-items:center;padding:0 32px;transition:background .4s,backdrop-filter .4s,box-shadow .4s;}
+#nav.s{background:rgba(28,24,18,.93);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);box-shadow:0 1px 0 rgba(255,255,255,.05);}
+.ni{display:flex;align-items:center;justify-content:space-between;width:100%;max-width:1240px;margin:0 auto;}
+.nl{text-decoration:none;line-height:1;}
+.nl span:first-child{display:block;font-family:var(--fs);font-size:1.5rem;color:var(--cr);letter-spacing:.08em;}
+.nl span:last-child{display:block;font-size:9px;letter-spacing:.25em;text-transform:uppercase;color:var(--st);margin-top:2px;}
+.nlinks{display:flex;align-items:center;gap:32px;list-style:none;}
+.nlinks a{font-size:13px;color:var(--crm);text-decoration:none;transition:color .2s;}
+.nlinks a:hover{color:var(--cr);}
+.ncta{background:var(--tc)!important;color:var(--cr)!important;padding:10px 22px;border-radius:3px;font-weight:500!important;}
+.ncta:hover{background:var(--tcl)!important;}
+.hbg{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;}
+.hbg span{display:block;width:24px;height:1.5px;background:var(--cr);}
+/* MOBILE MENU */
+.mm{display:none;position:fixed;inset:0;background:rgba(28,24,18,.97);z-index:99;flex-direction:column;align-items:center;justify-content:center;gap:28px;}
+.mm.o{display:flex;}
+.mm a{font-family:var(--fs);font-size:2rem;color:var(--cr);text-decoration:none;}
+.mm a:hover{color:var(--am);}
+.mmc{position:absolute;top:20px;right:24px;background:none;border:none;color:var(--cr);font-size:1.5rem;cursor:pointer;padding:8px;}
+/* HERO */
+#hero{height:100vh;min-height:650px;display:flex;align-items:center;justify-content:center;text-align:center;position:relative;overflow:hidden;}
+.hbg2{position:absolute;inset:0;background-image:url('https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=1920&q=80&auto=format&fit=crop');background-size:cover;background-position:center 40%;transform:scale(1.08);}
+.hov{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(28,24,18,.5) 0%,rgba(28,24,18,.3) 40%,rgba(28,24,18,.7) 80%,rgba(28,24,18,.97) 100%);}
+.hc{position:relative;z-index:2;max-width:900px;padding:0 24px;}
+.hey{display:inline-flex;align-items:center;gap:12px;margin-bottom:24px;}
+.heyl{width:36px;height:1px;background:var(--tc);}
+.heyt{font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--crm);}
+.ht{font-size:clamp(4rem,12vw,9rem);color:var(--cr);letter-spacing:.12em;text-transform:uppercase;line-height:.9;margin-bottom:10px;}
+.hts{display:block;font-size:clamp(1.4rem,4vw,2.8rem);letter-spacing:.2em;font-weight:300;font-style:italic;color:var(--crm);}
+.hdiv{width:56px;height:1px;background:var(--tc);margin:20px auto 20px;}
+.hsub{font-size:clamp(.85rem,2vw,1rem);color:var(--stl);letter-spacing:.12em;text-transform:uppercase;margin-bottom:44px;}
+.ha{display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap:wrap;}
+.bp{display:inline-flex;align-items:center;gap:8px;background:var(--tc);color:var(--cr);text-decoration:none;padding:15px 32px;font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;border-radius:3px;transition:background .2s,transform .2s;border:none;cursor:pointer;}
+.bp:hover{background:var(--tcl);transform:translateY(-2px);}
+.bs{display:inline-flex;align-items:center;gap:8px;background:transparent;color:var(--cr);text-decoration:none;padding:14px 32px;font-size:12px;font-weight:400;letter-spacing:.1em;text-transform:uppercase;border-radius:3px;border:1px solid rgba(245,240,232,.3);transition:border-color .2s;cursor:pointer;}
+.bs:hover{border-color:var(--cr);}
+.hscr{position:absolute;bottom:36px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:6px;color:var(--st);font-size:10px;letter-spacing:.2em;text-transform:uppercase;z-index:2;animation:bob 2s ease-in-out infinite;}
+.hscrl{width:1px;height:36px;background:linear-gradient(to bottom,var(--st),transparent);}
+@keyframes bob{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(6px)}}
+/* STATS */
+#stats{background:var(--bge);border-top:1px solid rgba(255,255,255,.04);border-bottom:1px solid rgba(255,255,255,.04);}
+.sg{display:grid;grid-template-columns:repeat(4,1fr);}
+.si{display:flex;flex-direction:column;align-items:center;text-align:center;padding:34px 20px;border-right:1px solid rgba(255,255,255,.06);}
+.si:last-child{border-right:none;}
+.sv{font-family:var(--fs);font-size:2.6rem;color:var(--am);line-height:1;margin-bottom:4px;}
+.sl{font-size:12px;color:var(--stl);letter-spacing:.08em;text-transform:uppercase;}
+.sico{font-size:1.1rem;margin-bottom:6px;opacity:.7;}
+/* SECTIONS */
+section{position:relative;}
+.sh{margin-bottom:56px;}.sh .lbl{display:block;margin-bottom:14px;}
+.st2{font-size:clamp(2.2rem,4.5vw,3.8rem);color:var(--cr);margin-bottom:.3em;}
+.ssub{font-size:1rem;color:var(--stl);max-width:540px;}
+/* RESIDENCE */
+#residence{padding:110px 0;background:var(--bg);}
+.rg{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:start;}
+.ri{font-family:var(--fs);font-size:clamp(1.6rem,2.8vw,2.4rem);color:var(--cr);margin-bottom:24px;line-height:1.25;font-style:italic;}
+.rb{font-size:.95rem;color:var(--stl);line-height:1.9;margin-bottom:18px;}
+.eg{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.et{font-family:var(--fs);font-size:1.5rem;color:var(--cr);font-style:italic;margin-bottom:28px;}
+.ei{display:flex;align-items:flex-start;gap:12px;padding:18px;background:var(--bge);border-radius:6px;border:1px solid rgba(255,255,255,.04);transition:border-color .2s;}
+.ei:hover{border-color:rgba(196,98,45,.3);}
+.eico{width:34px;height:34px;display:flex;align-items:center;justify-content:center;background:rgba(196,98,45,.1);border-radius:50%;font-size:.95rem;flex-shrink:0;}
+.einfo h4{font-family:var(--fn);font-size:13px;font-weight:500;color:var(--cr);margin-bottom:2px;}
+.einfo p{font-size:11px;color:var(--st);}
+/* APPARTEMENTS */
+#appartements{padding:110px 0;background:#1F1A10;}
+.ag{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+.agt{font-family:var(--fs);font-size:1.3rem;font-style:italic;color:var(--stl);margin:44px 0 20px;display:flex;align-items:center;gap:14px;}
+.agt::after{content:'';flex:1;height:1px;background:rgba(255,255,255,.06);}
+.agt:first-of-type{margin-top:0;}
+.ac{background:var(--bge);border-radius:10px;overflow:hidden;border:1px solid rgba(255,255,255,.05);transition:transform .35s cubic-bezier(.16,1,.3,1),box-shadow .35s,border-color .35s;}
+.ac:hover{transform:translateY(-8px);box-shadow:0 16px 48px rgba(0,0,0,.6);border-color:rgba(196,98,45,.25);}
+.av{height:190px;position:relative;overflow:hidden;}
+.avg{width:100%;height:100%;transition:transform .6s cubic-bezier(.16,1,.3,1);}
+.ac:hover .avg{transform:scale(1.06);}
+.abadge{position:absolute;top:14px;left:14px;background:var(--tc);color:var(--cr);font-size:9px;font-weight:500;letter-spacing:.15em;text-transform:uppercase;padding:4px 10px;border-radius:2px;}
+.ab{padding:22px;}
+.an{font-family:var(--fs);font-size:1.35rem;color:var(--cr);margin-bottom:8px;}
+.am2{display:flex;gap:14px;margin-bottom:14px;}
+.ami{display:flex;align-items:center;gap:4px;font-size:11px;color:var(--st);}
+.ad{font-size:12px;color:var(--stl);line-height:1.7;margin-bottom:18px;}
+.af{display:flex;align-items:center;justify-content:space-between;padding-top:18px;border-top:1px solid rgba(255,255,255,.06);}
+.apf{font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:var(--st);}
+.apv{font-family:var(--fs);font-size:1.75rem;color:var(--am);line-height:1;}
+.apu{font-size:10px;color:var(--st);}
+.bsm{display:inline-flex;align-items:center;gap:5px;background:transparent;color:var(--tc);text-decoration:none;padding:8px 16px;font-size:11px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;border-radius:3px;border:1px solid var(--tc);transition:background .2s,color .2s;cursor:pointer;}
+.bsm:hover{background:var(--tc);color:var(--cr);}
+/* SAISONS */
+#saisons{padding:110px 0;background:var(--bg);}
+.saig{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;margin-top:56px;}
+.saic{border-radius:10px;overflow:hidden;position:relative;min-height:340px;transition:transform .3s;}
+.saic:hover{transform:scale(1.02);}
+.saib{position:absolute;inset:0;transition:transform .6s;}
+.saic:hover .saib{transform:scale(1.05);}
+.saio{position:absolute;inset:0;}
+.saicc{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:28px;}
+.sait{display:inline-flex;align-items:center;background:rgba(196,98,45,.85);color:var(--cr);font-size:9px;letter-spacing:.2em;text-transform:uppercase;padding:4px 10px;border-radius:2px;width:fit-content;margin-bottom:10px;}
+.sain{font-family:var(--fs);font-size:2rem;color:var(--cr);margin-bottom:6px;font-style:italic;}
+.saip{font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:var(--crm);margin-bottom:14px;}
+.saiac{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px;}
+.saiact{font-size:10px;color:var(--crm);background:rgba(255,255,255,.08);padding:3px 9px;border-radius:20px;backdrop-filter:blur(4px);}
+.saitr{display:flex;align-items:center;gap:8px;padding:9px 12px;background:rgba(212,148,58,.15);border:1px solid rgba(212,148,58,.3);border-radius:3px;width:fit-content;}
+.saitrl{font-size:11px;color:var(--am);letter-spacing:.06em;}
+.saitrv{font-family:var(--fs);font-size:1.1rem;color:var(--aml);}
+.s-pr .saib{background:linear-gradient(135deg,#1A2515,#2A3820);}
+.s-pr .saio{background:linear-gradient(to top,rgba(26,37,21,.95),rgba(26,37,21,.45),rgba(26,37,21,.1));}
+.s-et .saib{background:linear-gradient(135deg,#1C1A0A,#3A3015);}
+.s-et .saio{background:linear-gradient(to top,rgba(28,26,10,.95),rgba(28,26,10,.45),rgba(28,26,10,.1));}
+.s-au .saib{background:linear-gradient(135deg,#2A1408,#3A1A08);}
+.s-au .saio{background:linear-gradient(to top,rgba(42,20,8,.95),rgba(42,20,8,.45),rgba(42,20,8,.1));}
+.s-hi .saib{background:linear-gradient(135deg,#0E1018,#1A1E28);}
+.s-hi .saio{background:linear-gradient(to top,rgba(14,16,24,.95),rgba(14,16,24,.45),rgba(14,16,24,.1));}
+/* LOCALISATION */
+#localisation{padding:110px 0;background:#1F1A10;}
+.log{display:grid;grid-template-columns:1fr 380px;gap:56px;align-items:start;margin-top:56px;}
+.mw{border-radius:10px;overflow:hidden;border:1px solid rgba(255,255,255,.06);height:460px;}
+.mw iframe{width:100%;height:100%;border:0;display:block;filter:grayscale(20%) contrast(1.1);}
+.dti{font-family:var(--fs);font-size:1.5rem;font-style:italic;color:var(--cr);margin-bottom:24px;}
+.di{display:flex;align-items:center;gap:14px;padding:16px 0;border-bottom:1px solid rgba(255,255,255,.06);}
+.di:last-of-type{border-bottom:none;}
+.dico{width:38px;height:38px;display:flex;align-items:center;justify-content:center;background:rgba(196,98,45,.1);border-radius:50%;font-size:.9rem;flex-shrink:0;}
+.din{flex:1;}
+.din strong{display:block;font-size:13px;color:var(--cr);font-weight:400;}
+.din small{font-size:11px;color:var(--st);}
+.div2{font-family:var(--fs);font-size:1.35rem;color:var(--am);}
+.adb{margin-top:28px;padding:22px;background:var(--bge);border-radius:6px;border:1px solid rgba(255,255,255,.05);}
+.adb h4{font-size:10px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--tc);margin-bottom:8px;}
+.adb p{font-size:13px;color:var(--crm);line-height:1.8;}
+/* AVIS */
+#avis{padding:110px 0;background:var(--bg);}
+.avg2{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:56px;}
+.avc{background:var(--bge);border-radius:10px;padding:30px;border:1px solid rgba(255,255,255,.05);position:relative;transition:border-color .3s;}
+.avc:hover{border-color:rgba(212,148,58,.2);}
+.avq{position:absolute;top:20px;right:24px;font-family:var(--fs);font-size:5rem;color:rgba(196,98,45,.1);line-height:1;pointer-events:none;}
+.avs{display:flex;gap:3px;margin-bottom:14px;}
+.avstar{color:var(--am);font-size:.85rem;}
+.avt{font-family:var(--fs);font-size:1rem;font-style:italic;color:var(--crm);line-height:1.8;margin-bottom:22px;}
+.ava{display:flex;align-items:center;gap:10px;}
+.avav{width:38px;height:38px;border-radius:50%;background:var(--bgc);display:flex;align-items:center;justify-content:center;font-family:var(--fs);font-size:1rem;color:var(--am);flex-shrink:0;}
+.avai h4{font-family:var(--fn);font-size:13px;font-weight:500;color:var(--cr);}
+.avai p{font-size:11px;color:var(--st);}
+/* RESERVATION */
+#reservation{padding:110px 0;background:var(--bge);position:relative;}
+#reservation::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(to right,transparent,rgba(196,98,45,.4),transparent);}
+.resg{display:grid;grid-template-columns:1fr 480px;gap:72px;align-items:start;}
+.resi{font-family:var(--fs);font-size:clamp(1.6rem,2.8vw,2.4rem);color:var(--cr);margin-bottom:18px;font-style:italic;line-height:1.25;}
+.resb{font-size:.95rem;color:var(--stl);line-height:1.9;margin-bottom:22px;}
+.resci{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--crm);margin-bottom:8px;}
+.resci a{color:var(--am);text-decoration:none;}
+.resci a:hover{color:var(--aml);}
+.rf{background:var(--bg);border-radius:10px;padding:36px;border:1px solid rgba(255,255,255,.06);}
+.rft{font-family:var(--fs);font-size:1.4rem;color:var(--cr);margin-bottom:26px;font-style:italic;}
+.fr{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+.fg{display:flex;flex-direction:column;gap:5px;margin-bottom:14px;}
+.fg label{font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:var(--st);}
+.fg input,.fg select{background:var(--bge);border:1px solid rgba(255,255,255,.08);border-radius:3px;color:var(--cr);font-family:var(--fn);font-size:13px;padding:11px 14px;outline:none;width:100%;-webkit-appearance:none;transition:border-color .2s;}
+.fg input:focus,.fg select:focus{border-color:rgba(196,98,45,.6);}
+.fg input[type=date]::-webkit-calendar-picker-indicator{filter:invert(.5);cursor:pointer;}
+.pp{background:rgba(196,98,45,.08);border:1px solid rgba(196,98,45,.2);border-radius:6px;padding:18px;margin-bottom:16px;min-height:76px;display:flex;flex-direction:column;justify-content:center;}
+.ppe{text-align:center;font-size:12px;color:var(--st);font-style:italic;}
+.pbd{display:none;}
+.pbd.show{display:block;}
+.pbdl{display:flex;justify-content:space-between;font-size:12px;color:var(--stl);margin-bottom:5px;}
+.pbdt{display:flex;justify-content:space-between;align-items:baseline;padding-top:10px;margin-top:10px;border-top:1px solid rgba(196,98,45,.2);}
+.pbdtl{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--st);}
+.pbdtv{font-family:var(--fs);font-size:1.9rem;color:var(--am);}
+.pst{display:inline-block;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--am);background:rgba(212,148,58,.12);padding:2px 7px;border-radius:2px;margin-bottom:7px;}
+.warn{font-size:11px;color:var(--tc);margin-top:3px;display:none;}
+.fsub{width:100%;background:var(--tc);color:var(--cr);font-family:var(--fn);font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;border:none;border-radius:3px;padding:15px 22px;cursor:pointer;transition:background .2s,transform .2s;display:flex;align-items:center;justify-content:center;gap:8px;}
+.fsub:hover{background:var(--tcl);transform:translateY(-1px);}
+.fn2{text-align:center;font-size:11px;color:var(--st);margin-top:10px;line-height:1.6;}
+/* FOOTER */
+footer{background:var(--bg);border-top:1px solid rgba(255,255,255,.06);padding:72px 0 36px;}
+.fg2{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:52px;margin-bottom:52px;}
+.flogo{font-family:var(--fs);font-size:1.7rem;color:var(--cr);letter-spacing:.08em;margin-bottom:3px;}
+.flogos{font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--st);margin-bottom:14px;}
+.fdesc{font-size:13px;color:var(--st);line-height:1.8;}
+.fct{font-size:10px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--tc);margin-bottom:18px;}
+.flinks{display:flex;flex-direction:column;gap:9px;list-style:none;}
+.flinks a{font-size:13px;color:var(--st);text-decoration:none;transition:color .2s;}
+.flinks a:hover{color:var(--cr);}
+.fci{display:flex;align-items:flex-start;gap:8px;font-size:13px;color:var(--st);margin-bottom:9px;line-height:1.7;}
+.fci a{color:var(--am);text-decoration:none;}
+.fdiv{height:1px;background:rgba(255,255,255,.06);margin-bottom:28px;}
+.fbot{display:flex;align-items:center;justify-content:space-between;gap:16px;}
+.fcopy{font-size:12px;color:var(--st);}
+/* RESPONSIVE */
+@media(max-width:1024px){.rg,.resg{grid-template-columns:1fr;gap:44px;}.log{grid-template-columns:1fr;}.fg2{grid-template-columns:1fr 1fr;gap:36px;}}
+@media(max-width:768px){.c{padding:0 20px;}#nav{padding:0 20px;}.nlinks{display:none;}.hbg{display:flex;}.sg{grid-template-columns:repeat(2,1fr);}.si:nth-child(2){border-right:none;}.si:nth-child(3){border-top:1px solid rgba(255,255,255,.06);border-right:1px solid rgba(255,255,255,.06);}.si:nth-child(4){border-top:1px solid rgba(255,255,255,.06);border-right:none;}.ag{grid-template-columns:1fr;}.saig{grid-template-columns:1fr;}.avg2{grid-template-columns:1fr;}.resg{grid-template-columns:1fr;}.fr{grid-template-columns:1fr;}.fg2{grid-template-columns:1fr;}#residence,#appartements,#saisons,#localisation,#avis,#reservation{padding:80px 0;}.rf{padding:26px 22px;}.fbot{flex-direction:column;text-align:center;}}
+@media(max-width:480px){.ha{flex-direction:column;align-items:stretch;}.bp,.bs{text-align:center;justify-content:center;}}
+</style>
+</head>
+<body>
+<div class="mm" id="mm"><button class="mmc" id="mmc">✕</button><a href="#residence" onclick="closeMM()">Résidence</a><a href="#appartements" onclick="closeMM()">Appartements</a><a href="#saisons" onclick="closeMM()">Saisons</a><a href="#localisation" onclick="closeMM()">Localisation</a><a href="#avis" onclick="closeMM()">Avis</a><a href="#reservation" onclick="closeMM()" style="color:var(--tc)">Réserver</a></div>
+<nav id="nav"><div class="ni"><a href="#hero" class="nl"><span>La Cascade</span><span>La Bourboule · Auvergne</span></a><ul class="nlinks"><li><a href="#residence">Résidence</a></li><li><a href="#appartements">Appartements</a></li><li><a href="#saisons">Saisons</a></li><li><a href="#localisation">Localisation</a></li><li><a href="#avis">Avis</a></li><li><a href="#reservation" class="ncta">Réserver</a></li></ul><button class="hbg" id="hbg" aria-label="Menu"><span></span><span></span><span></span></button></div></nav>
+<section id="hero"><div class="hbg2" id="heroBg"></div><div class="hov"></div><div class="hc"><div class="hey"><span class="heyl"></span><span class="heyt">17 Rue Corneille · La Bourboule · Puy-de-Dôme</span><span class="heyl"></span></div><h1 class="ht"><span class="hts">La</span>Cascade</h1><div class="hdiv"></div><p class="hsub">Station thermale &amp; ski · 8 appartements de charme · Auvergne volcanique</p><div class="ha"><a href="#reservation" class="bp">Voir les disponibilités <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M1 6.5h11M7 1.5l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="#appartements" class="bs">Nos appartements</a></div></div><div class="hscr"><div class="hscrl"></div><span>Découvrir</span></div></section>
+<section id="stats"><div class="c"><div class="sg"><div class="si reveal"><span class="sico">🏠</span><span class="sv">8</span><span class="sl">Appartements</span></div><div class="si reveal d1"><span class="sico">⭐</span><span class="sv">4.9</span><span class="sl">Note voyageurs</span></div><div class="si reveal d2"><span class="sico">🌊</span><span class="sv">3 min</span><span class="sl">Des Thermes</span></div><div class="si reveal d3"><span class="sico">⛷️</span><span class="sv">12 km</span><span class="sl">Super-Besse</span></div></div></div></section>
+<section id="residence"><div class="c"><div class="rg"><div class="reveal"><span class="lbl">La résidence</span><p class="ri">Au cœur du pays volcanique d'Auvergne</p><p class="rb">Nichée au 17 rue Corneille, à trois minutes à pied des sources thermales de La Bourboule, la résidence La Cascade propose huit appartements entièrement équipés pour un séjour ressourçant au cœur du Puy-de-Dôme. Calme, confort et authenticité dans un cadre naturel exceptionnel.</p><p class="rb">Entre cure thermale en été et domaine skiable de Super-Besse à 12 km en hiver, La Cascade est votre point d'ancrage idéal pour explorer l'Auvergne volcanique — en toutes saisons.</p></div><div class="reveal d1"><p class="et">Équipements inclus</p><div class="eg"><div class="ei"><div class="eico">🔐</div><div class="einfo"><h4>Accès code</h4><p>Arrivée autonome 24h/24</p></div></div><div class="ei"><div class="eico">📶</div><div class="einfo"><h4>Wi-Fi fibre</h4><p>Connexion dans tout l'immeuble</p></div></div><div class="ei"><div class="eico">🌡️</div><div class="einfo"><h4>Chauffage individuel</h4><p>Thermostat réglable</p></div></div><div class="ei"><div class="eico">🛁</div><div class="einfo"><h4>Linge fourni</h4><p>Draps et serviettes inclus</p></div></div><div class="ei"><div class="eico">🍳</div><div class="einfo"><h4>Cuisine équipée</h4><p>Réfrigérateur, plaques, cafetière</p></div></div><div class="ei"><div class="eico">🚗</div><div class="einfo"><h4>Parking</h4><p>Stationnement gratuit à proximité</p></div></div></div></div></div></div></section>
+<section id="appartements"><div class="c"><div class="sh reveal"><span class="lbl">Nos logements</span><h2 class="st2">Choisissez votre espace</h2><p class="ssub">Studios intimes ou T2 familiaux — chaque appartement est pensé pour votre confort en toutes saisons.</p></div>
+<p class="agt reveal">Studios — 5 disponibles</p>
+<div class="ag">
+<div class="ac reveal"><div class="av" style="background:linear-gradient(135deg,#2A1A0A,#3D2310)"><span class="abadge">Studio</span></div><div class="ab"><h3 class="an">Studio Volcane</h3><div class="am2"><span class="ami">📐 20 m²</span><span class="ami">👤 2 pers.</span><span class="ami">🏔️ Vue montagne</span></div><p class="ad">Côté est, 3e étage. Baigné de lumière matinale, vue dégagée sur les reliefs volcaniques.</p><div class="af"><div><p class="apf">Dès</p><p class="apv">58€</p><p class="apu">/nuit</p></div><a href="#reservation" class="bsm">Réserver →</a></div></div></div>
+<div class="ac reveal d1"><div class="av" style="background:linear-gradient(135deg,#0F1A12,#1A2E1A)"><span class="abadge">Studio</span></div><div class="ab"><h3 class="an">Studio Source</h3><div class="am2"><span class="ami">📐 20 m²</span><span class="ami">👤 2 pers.</span><span class="ami">🌿 Côté cour</span></div><p class="ad">2e étage, calme et lumineux. Idéal pour un séjour de cure thermale ressourçant.</p><div class="af"><div><p class="apf">Dès</p><p class="apv">58€</p><p class="apu">/nuit</p></div><a href="#reservation" class="bsm">Réserver →</a></div></div></div>
+<div class="ac reveal d2"><div class="av" style="background:linear-gradient(135deg,#1A1208,#2E2010)"><span class="abadge">Studio</span></div><div class="ab"><h3 class="an">Studio Garabit</h3><div class="am2"><span class="ami">📐 20 m²</span><span class="ami">👤 2 pers.</span><span class="ami">☀️ Plein sud</span></div><p class="ad">1er étage, exposition plein sud. Lumineux en toutes saisons, accès direct au parking.</p><div class="af"><div><p class="apf">Dès</p><p class="apv">58€</p><p class="apu">/nuit</p></div><a href="#reservation" class="bsm">Réserver →</a></div></div></div>
+</div>
+<p class="agt reveal">T2 — 3 disponibles</p>
+<div class="ag">
+<div class="ac reveal"><div class="av" style="background:linear-gradient(135deg,#141210,#221E16)"><span class="abadge">T2</span></div><div class="ab"><h3 class="an">T2 Panorama</h3><div class="am2"><span class="ami">📐 30 m²</span><span class="ami">👥 4 pers.</span><span class="ami">🏔️ Vue vallée</span></div><p class="ad">Grand séjour avec coin salon, 2 espaces couchage séparables. Idéal pour familles.</p><div class="af"><div><p class="apf">Dès</p><p class="apv">85€</p><p class="apu">/nuit</p></div><a href="#reservation" class="bsm">Réserver →</a></div></div></div>
+<div class="ac reveal d1"><div class="av" style="background:linear-gradient(135deg,#101510,#1A251A)"><span class="abadge">T2</span></div><div class="ab"><h3 class="an">T2 Forêt</h3><div class="am2"><span class="ami">📐 30 m²</span><span class="ami">👥 4 pers.</span><span class="ami">🌲 Vue parc</span></div><p class="ad">Cuisine ouverte sur séjour, vue sur les arbres. Ambiance chalet contemporain.</p><div class="af"><div><p class="apf">Dès</p><p class="apv">85€</p><p class="apu">/nuit</p></div><a href="#reservation" class="bsm">Réserver →</a></div></div></div>
+<div class="ac reveal d2"><div class="av" style="background:linear-gradient(135deg,#1C1008,#2E1A0A)"><span class="abadge">T2</span></div><div class="ab"><h3 class="an">T2 Prestige</h3><div class="am2"><span class="ami">📐 30 m²</span><span class="ami">👥 4 pers.</span><span class="ami">✨ Premium</span></div><p class="ad">Agencement haut de gamme, 2e étage. Équipements premium, idéal pour groupes de 4.</p><div class="af"><div><p class="apf">Dès</p><p class="apv">85€</p><p class="apu">/nuit</p></div><a href="#reservation" class="bsm">Réserver →</a></div></div></div>
+</div></div></section>
+<section id="saisons"><div class="c"><div class="sh reveal"><span class="lbl">Toute l'année</span><h2 class="st2">Les 4 saisons à La Bourboule</h2><p class="ssub">Chaque saison offre une expérience unique — et une raison différente de revenir.</p></div><div class="saig">
+<div class="saic s-pr reveal"><div class="saib"></div><div class="saio"></div><div class="saicc"><span class="sait">🌱 Printemps</span><h3 class="sain">Éveil volcanique</h3><p class="saip">Avril — Mai</p><div class="saiac"><span class="saiact">Randonnées</span><span class="saiact">VTT</span><span class="saiact">Thermes</span><span class="saiact">Marchés locaux</span><span class="saiact">Puy de Dôme</span></div><div class="saitr"><span class="saitrl">Tarif</span><span class="saitrv">Standard</span></div></div></div>
+<div class="saic s-et reveal d1"><div class="saib"></div><div class="saio"></div><div class="saicc"><span class="sait">☀️ Été</span><h3 class="sain">Saison thermale</h3><p class="saip">Juin — Septembre</p><div class="saiac"><span class="saiact">Cure thermale</span><span class="saiact">Piscines</span><span class="saiact">Festivals</span><span class="saiact">Randonnées</span><span class="saiact">Vulcania</span></div><div class="saitr"><span class="saitrl">Haute saison</span><span class="saitrv">+40%</span></div></div></div>
+<div class="saic s-au reveal d2"><div class="saib"></div><div class="saio"></div><div class="saicc"><span class="sait">🍂 Automne</span><h3 class="sain">Couleurs d'Auvergne</h3><p class="saip">Octobre — Novembre</p><div class="saiac"><span class="saiact">Champignons</span><span class="saiact">Gastronomie</span><span class="saiact">Couleurs</span><span class="saiact">Randonnées</span><span class="saiact">Orcival</span></div><div class="saitr"><span class="saitrl">Tarif</span><span class="saitrv">Standard</span></div></div></div>
+<div class="saic s-hi reveal d3"><div class="saib"></div><div class="saio"></div><div class="saicc"><span class="sait">❄️ Hiver</span><h3 class="sain">Ski & ressourcement</h3><p class="saip">Décembre — Février</p><div class="saiac"><span class="saiact">Super-Besse 12km</span><span class="saiact">Raquettes</span><span class="saiact">Patinage</span><span class="saiact">Thermes</span><span class="saiact">Fondue</span></div><div class="saitr"><span class="saitrl">Haute saison ski</span><span class="saitrv">+30%</span></div></div></div>
+</div></div></section>
+<section id="localisation"><div class="c"><div class="sh reveal"><span class="lbl">Situation</span><h2 class="st2">Au cœur de tout</h2><p class="ssub">La Bourboule, carrefour naturel de l'Auvergne — thermes, ski, nature et culture à portée de main.</p></div><div class="log"><div class="mw reveal"><iframe src="https://maps.google.com/maps?q=La+Bourboule+63150+Puy-de-Dome+France&output=embed&z=14" allowfullscreen loading="lazy" title="La Cascade sur la carte"></iframe></div><div class="reveal d1"><p class="dti">Distances depuis la résidence</p><div class="di"><div class="dico">🌊</div><div class="din"><strong>Thermes de La Bourboule</strong><small>À pied · centre thermal</small></div><span class="div2">3 min</span></div><div class="di"><div class="dico">🏪</div><div class="din"><strong>Centre-ville &amp; commerces</strong><small>À pied · boulangeries, restaurants</small></div><span class="div2">5 min</span></div><div class="di"><div class="dico">⛷️</div><div class="din"><strong>Super-Besse</strong><small>En voiture · domaine skiable</small></div><span class="div2">12 km</span></div><div class="di"><div class="dico">🏙️</div><div class="din"><strong>Clermont-Ferrand</strong><small>En voiture · gare TGV, aéroport</small></div><span class="div2">50 km</span></div><div class="di"><div class="dico">🏰</div><div class="din"><strong>Basilique d'Orcival</strong><small>En voiture · patrimoine roman</small></div><span class="div2">15 km</span></div><div class="di"><div class="dico">🌋</div><div class="din"><strong>Vulcania</strong><small>En voiture · parc des volcans</small></div><span class="div2">25 km</span></div><div class="adb"><h4>Adresse</h4><p>17 Rue Corneille<br>63150 La Bourboule<br>Puy-de-Dôme, Auvergne</p></div></div></div></div></section>
+<section id="avis"><div class="c"><div class="sh reveal"><span class="lbl">Témoignages</span><h2 class="st2">Ce qu'ils en disent</h2><p class="ssub">Plus de 4.9★ de moyenne sur l'ensemble de nos séjours.</p></div><div class="avg2">
+<div class="avc reveal"><span class="avq">"</span><div class="avs"><span class="avstar">★</span><span class="avstar">★</span><span class="avstar">★</span><span class="avstar">★</span><span class="avstar">★</span></div><p class="avt">Un séjour parfait en famille. Les appartements sont propres, bien équipés et le quartier est calme. La cure thermale à 3 minutes à pied, c'est un luxe incomparable. Nous reviendrons sûrement !</p><div class="ava"><div class="avav">M</div><div class="avai"><h4>Marie-Claire D.</h4><p>T2 Panorama · Juillet 2024</p></div></div></div>
+<div class="avc reveal d1"><span class="avq">"</span><div class="avs"><span class="avstar">★</span><span class="avstar">★</span><span class="avstar">★</span><span class="avstar">★</span><span class="avstar">★</span></div><p class="avt">Week-end ski à Super-Besse depuis La Cascade : une expérience mémorable. L'appartement était chaud, confortable, et la résidence bien sécurisée. Rapport qualité-prix excellent.</p><div class="ava"><div class="avav">T</div><div class="avai"><h4>Thomas &amp; Sarah B.</h4><p>Studio Volcane · Février 2024</p></div></div></div>
+<div class="avc reveal d2"><span class="avq">"</span><div class="avs"><span class="avstar">★</span><span class="avstar">★</span><span class="avstar">★</span><span class="avstar">★</span><span class="avstar">★</span></div><p class="avt">Accueil sans faille avec le code d'accès. Situation idéale pour explorer l'Auvergne. Vulcania, Super-Besse, le Puy de Dôme — tout est accessible. Je recommande vivement.</p><div class="ava"><div class="avav">I</div><div class="avai"><h4>Isabelle R.</h4><p>Studio Source · Octobre 2024</p></div></div></div>
+</div></div></section>
+<section id="reservation"><div class="c"><div class="resg"><div class="reveal"><span class="lbl">Réservation directe</span><p class="resi">Réservez sans intermédiaire, sans frais de plateforme</p><p class="resb">Contactez-nous directement pour bénéficier des meilleurs tarifs. Séjour minimum 3 nuits. Réponse sous 24h avec confirmation de disponibilité et devis personnalisé.</p><div class="resci">📧 <a href="mailto:contact@lacascade-bourboule.fr">contact@lacascade-bourboule.fr</a></div><div class="resci">📍 17 Rue Corneille, 63150 La Bourboule</div><div class="resci">⏱️ Réponse garantie sous 24h</div></div><div class="reveal d1"><div class="rf"><p class="rft">Calculez votre séjour</p><form id="resForm" onsubmit="submitForm(event)"><div class="fr"><div class="fg"><label for="arr">Arrivée</label><input type="date" id="arr" required></div><div class="fg"><label for="dep">Départ</label><input type="date" id="dep" required></div></div><div class="fg"><label for="log">Type de logement</label><select id="log"><option value="studio">Studio — ~20 m² · 2 personnes</option><option value="t2">T2 — ~30 m² · 4 personnes</option></select></div><div class="fg"><label for="voy">Nombre de voyageurs</label><select id="voy"><option value="1">1 voyageur</option><option value="2">2 voyageurs</option><option value="3">3 voyageurs</option><option value="4">4 voyageurs</option></select></div><div class="pp"><p class="ppe" id="ppe">Sélectionnez vos dates pour estimer le prix total</p><div class="pbd" id="pbd"><span class="pst" id="pst"></span><div class="pbdl"><span id="pbl1"></span><span id="pbv1"></span></div><div class="pbdl"><span>Base tarifaire</span><span id="pbv2"></span></div><div class="pbdt"><span class="pbdtl">Estimation totale</span><span class="pbdtv" id="pbtot"></span></div></div><p class="warn" id="warn">⚠️ Séjour minimum 3 nuits</p></div><button type="submit" class="fsub">Envoyer ma demande <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M1 6.5h11M7 1.5l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button><p class="fn2">Séjour minimum 3 nuits · Confirmation sous 24h<br>Paiement à l'arrivée ou par virement</p></form></div></div></div></div></section>
+<footer><div class="c"><div class="fg2"><div><p class="flogo">La Cascade</p><p class="flogos">La Bourboule · Auvergne</p><p class="fdesc">Résidence de charme au cœur de La Bourboule, station thermale et ski du Puy-de-Dôme. 8 appartements, toutes saisons.</p></div><div><p class="fct">Navigation</p><ul class="flinks"><li><a href="#residence">La résidence</a></li><li><a href="#appartements">Appartements</a></li><li><a href="#saisons">Les saisons</a></li><li><a href="#localisation">Localisation</a></li><li><a href="#avis">Avis voyageurs</a></li><li><a href="#reservation">Réserver</a></li></ul></div><div><p class="fct">Contact</p><div class="fci">📍 17 Rue Corneille<br>63150 La Bourboule</div><div class="fci">📧 <a href="mailto:contact@lacascade-bourboule.fr">contact@lacascade-bourboule.fr</a></div></div><div><p class="fct">Informations</p><ul class="flinks"><li><a href="#">Séjour minimum 3 nuits</a></li><li><a href="#">Studios dès 58€/nuit</a></li><li><a href="#">T2 dès 85€/nuit</a></li><li><a href="#">Thermes à 3 min</a></li><li><a href="#">Super-Besse 12 km</a></li></ul></div></div><div class="fdiv"></div><div class="fbot"><p class="fcopy">© 2024 SCI CASCADE — Tous droits réservés</p><p class="fcopy">La Bourboule · Puy-de-Dôme · Auvergne</p></div></div></footer>
+<script>
+const nav=document.getElementById('nav');
+const hbg=document.getElementById('hbg');
+const mm=document.getElementById('mm');
+const mmc=document.getElementById('mmc');
+window.addEventListener('scroll',()=>{nav.classList.toggle('s',window.scrollY>60);const bg=document.getElementById('heroBg');if(bg)bg.style.transform=`scale(1.08) translateY(${window.scrollY*.25}px)`;},{passive:true});
+const obs=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('v');}),{threshold:.1,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+hbg.addEventListener('click',()=>{mm.classList.add('o');document.body.style.overflow='hidden';});
+mmc.addEventListener('click',closeMM);
+function closeMM(){mm.classList.remove('o');document.body.style.overflow='';}
+const arr=document.getElementById('arr');
+const dep=document.getElementById('dep');
+const log=document.getElementById('log');
+const today=new Date().toISOString().split('T')[0];
+arr.min=today;dep.min=today;
+function getSeason(m){if(m>=5&&m<=8)return{n:'Haute saison thermale',m:1.4,l:'+40%'};if(m===11||m<=1)return{n:'Haute saison ski',m:1.3,l:'+30%'};return{n:'Basse saison',m:1.0,l:'Tarif standard'};}
+function calc(){
+  const a=new Date(arr.value),d=new Date(dep.value);
+  const ppe=document.getElementById('ppe'),pbd=document.getElementById('pbd'),warn=document.getElementById('warn');
+  if(!arr.value||!dep.value){ppe.style.display='block';pbd.classList.remove('show');warn.style.display='none';return;}
+  const nights=Math.round((d-a)/86400000);
+  if(nights<=0){ppe.style.display='block';pbd.classList.remove('show');warn.style.display='none';return;}
+  if(nights<3){ppe.style.display='none';pbd.classList.remove('show');warn.style.display='block';return;}
+  warn.style.display='none';
+  const base=log.value==='studio'?58:85;
+  const s=getSeason(a.getMonth());
+  const rate=Math.round(base*s.m);
+  const total=rate*nights;
+  document.getElementById('pst').textContent=s.n+' ('+s.l+')';
+  document.getElementById('pbl1').textContent=nights+' nuit'+(nights>1?'s':'')+' × '+rate+'€/nuit';
+  document.getElementById('pbv1').textContent='';
+  document.getElementById('pbv2').textContent=base+'€ × '+s.m;
+  document.getElementById('pbtot').textContent=total+'€';
+  ppe.style.display='none';pbd.classList.add('show');
+}
+[arr,dep,log].forEach(el=>el.addEventListener('change',calc));
+arr.addEventListener('change',()=>{dep.min=arr.value;calc();});
+function submitForm(e){
+  e.preventDefault();
+  const type=log.value==='studio'?'Studio':'T2';
+  const voy=document.getElementById('voy').value;
+  const s=encodeURIComponent('Demande de réservation – La Cascade – '+type);
+  const b=encodeURIComponent('Bonjour,\n\nJe souhaite réserver à La Cascade :\n\nArrivée : '+arr.value+'\nDépart : '+dep.value+'\nType : '+type+'\nVoyageurs : '+voy+'\n\nMerci de confirmer la disponibilité.\n\nCordialement');
+  window.location.href='mailto:contact@lacascade-bourboule.fr?subject='+s+'&body='+b;
+}
+</script>
+</body>
+</html>
